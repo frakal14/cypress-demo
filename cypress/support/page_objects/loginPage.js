@@ -13,7 +13,16 @@ export class LoginPage {
         cy.on('window:alert', (text) => {
             expect(text).to.contains('Please fill out Username and Password.')
         })
+    }
 
+    closeLoginModalWithX() {
+        cy.get('.close').first().click({force: true}).should('not.be.visible')
+    
+    }
+
+    closeLoginModalWithButton() {
+        cy.get('[class="btn btn-secondary"]').eq(1).click({force: true}).should('not.be.visible')
+    
     }
 
 
