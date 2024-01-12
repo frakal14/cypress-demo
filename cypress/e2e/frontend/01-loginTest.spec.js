@@ -5,12 +5,18 @@ describe('Validate login page functionality', () => {
 
     beforeEach( () => {
         cy.openHomePage()
+        onHeaderPage.clickOnLogin()
     })
 
     it('User can login with valid credentials', () => {
-        onHeaderPage.clickOnLogin()
         onLoginPage.loginWithValidCredentials('frakal', 'Password123!')
     })
+
+    it('User cannot logn with partial username or password', () => {
+        onLoginPage.loginWithPartialData('test')
+    })
+
+    
 
 
 
