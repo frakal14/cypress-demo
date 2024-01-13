@@ -1,5 +1,6 @@
 import { onHeaderPage } from "../../support/page_objects/headerPage"
 import { onLoginPage } from "../../support/page_objects/loginPage"
+import loginData from "../../fixtures/loginData.json"
 
 describe('Validate login page functionality', () => {
 
@@ -9,11 +10,11 @@ describe('Validate login page functionality', () => {
     })
 
     it('User can login with valid credentials', () => {
-        onLoginPage.loginWithCredentials(Cypress.env('username'), Cypress.env('password'))
+        onLoginPage.loginWithCredentials(loginData.username, loginData.password)
     })
 
     it('User cannot login with invalid credentials', () => {
-        onLoginPage.loginWithInvalidCredentials(Cypress.env('invalidUsername'), Cypress.env('password'))
+        onLoginPage.loginWithInvalidCredentials(loginData.invalidUsername, loginData.password)
     })
 
     it('User cannot logn with partial username or password', () => {

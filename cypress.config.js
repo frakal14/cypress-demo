@@ -4,11 +4,6 @@ module.exports = defineConfig({
   viewportHeight: 1080,
   viewportWidth: 1920,
   video: false,
-  env: {
-    username: 'frakal',
-    password: 'Password123!',
-    invalidUsername: 'Frakal'
-  },
   e2e: {
     baseUrl: 'https://demoblaze.com/',
     excludeSpecPattern: ['**/1-getting-started', '**/2-advanced-examples'],
