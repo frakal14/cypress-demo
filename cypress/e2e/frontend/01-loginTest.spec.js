@@ -9,7 +9,7 @@ describe('Validate login page functionality', () => {
     })
 
     it('User can login with valid credentials', () => {
-        onLoginPage.loginWithValidCredentials('frakal', 'Password123!')
+        onLoginPage.loginWithValidCredentials(Cypress.env('username'), Cypress.env('password'))
     })
 
     it('User cannot logn with partial username or password', () => {
@@ -21,6 +21,10 @@ describe('Validate login page functionality', () => {
         onLoginPage.closeLoginModalWithButton()
     })
 
+
+   //  TODO:  Watch global veriables turotial and implement into test suite for user credentials and what else 
+   // TODO: Get more info on POM selectors hadling best practises
+   
 
 
 
