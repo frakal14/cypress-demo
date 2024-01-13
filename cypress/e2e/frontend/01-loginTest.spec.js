@@ -25,6 +25,12 @@ describe('Validate login page functionality', () => {
         onLoginPage.closeLoginModalWithButton()
     })
 
+    it('Login form validation trigger with no data', () => {
+        onLoginPage.loginWIthNoData()
+    })
+
+
+
     
 
 

@@ -1,5 +1,6 @@
 export class LoginPage {
 
+
     loginWithCredentials(username, password) {
         cy.get('#loginusername').clear().type(username)
         cy.get('#loginpassword').clear().type(password)
@@ -23,6 +24,14 @@ export class LoginPage {
             expect(text).to.contains('Please fill out Username and Password.')
         })
     }
+
+    loginWIthNoData() {
+        cy.contains('button', 'Log in').click({ force: true })
+        cy.on('window:alert', (text) => {
+            expect(text).to.contains('Please fill out Username and Password.')
+        })
+    }
+
 
     closeLoginModalWithX() {
         cy.get('.close').first().click({force: true}).should('not.be.visible')
