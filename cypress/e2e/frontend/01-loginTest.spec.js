@@ -4,7 +4,7 @@ import loginData from "../../fixtures/loginData.json"
 
 describe('Validate login page functionality', () => {
 
-    beforeEach( () => {
+    beforeEach('Open the landing page and click on Login button', () => {
         cy.openHomePage()
         onHeaderPage.clickOnLogin()
     })
@@ -30,19 +30,9 @@ describe('Validate login page functionality', () => {
         onLoginPage.loginWIthNoData()
     })
 
-
-
     
 
-
-   //  TODO:  Watch global veriables turotial and implement into test suite for user credentials and what else 
-   // TODO: Get more info on POM selectors hadling best practises
    
-
-
-
-
-
 
 
 })

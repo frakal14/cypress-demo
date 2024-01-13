@@ -1,16 +1,19 @@
 import { onHeaderPage } from "../../support/page_objects/headerPage"
 import {onSignUpPage } from "../../support/page_objects/signUpPage"
+import signUpData from "../../fixtures/signUpData.json"
+import { faker } from '@faker-js/faker'
+
 
 
 describe('Validate sign up form functionality', () => {
 
-    beforeEach( () => {
+    beforeEach('Open the landing page and click on Sign Up button', () => {
         cy.openHomePage()
         onHeaderPage.clickOnSignUp()
     })
 
     it('User is able to sign up with valid data', () => {
-        onSignUpPage.signUpWithCredentials('tyhyrthtyhtyhtyh', 'Password123!')
+        onSignUpPage.signUpWithCredentials(faker.person.firstName(), signUpData.password)
 
 
 
