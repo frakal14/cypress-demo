@@ -6,7 +6,8 @@ module.exports = defineConfig({
   video: false,
   env: {
     username: 'frakal',
-    password: 'Password123!'
+    password: 'Password123!',
+    invalidUsername: 'Frakal'
   },
   e2e: {
     baseUrl: 'https://demoblaze.com/',

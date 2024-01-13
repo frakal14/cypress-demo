@@ -9,7 +9,11 @@ describe('Validate login page functionality', () => {
     })
 
     it('User can login with valid credentials', () => {
-        onLoginPage.loginWithValidCredentials(Cypress.env('username'), Cypress.env('password'))
+        onLoginPage.loginWithCredentials(Cypress.env('username'), Cypress.env('password'))
+    })
+
+    it('User cannot login with invalid credentials', () => {
+        onLoginPage.loginWithInvalidCredentials(Cypress.env('invalidUsername'), Cypress.env('password'))
     })
 
     it('User cannot logn with partial username or password', () => {
@@ -20,6 +24,8 @@ describe('Validate login page functionality', () => {
         onLoginPage.closeLoginModalWithX()
         onLoginPage.closeLoginModalWithButton()
     })
+
+    
 
 
    //  TODO:  Watch global veriables turotial and implement into test suite for user credentials and what else 

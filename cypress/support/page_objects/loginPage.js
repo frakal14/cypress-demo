@@ -1,10 +1,19 @@
 export class LoginPage {
 
-    loginWithValidCredentials(username, password) {
+    loginWithCredentials(username, password) {
         cy.get('#loginusername').clear().type(username)
         cy.get('#loginpassword').clear().type(password)
         cy.contains('button', 'Log in').click({ force: true })
         cy.get('#nameofuser', { timeout: 10000 }).should('include.text', 'Welcome')
+    }
+
+    loginWithInvalidCredentials(username, password) {
+        cy.get('#loginusername').clear().type(username)
+        cy.get('#loginpassword').clear().type(password)
+        cy.contains('button', 'Log in').click({ force: true })
+        cy.on('window:alert', (text) => {
+            expect(text).to.contains('User does not exist.')
+        })
     }
 
     loginWithPartialData(username) {
