@@ -4,6 +4,10 @@ export class HeaderPage{
         cy.get('#login2').click()
     }
 
+    clickOnSignUp() {
+        cy.get('#signin2').click()
+    }
+
 
 
 

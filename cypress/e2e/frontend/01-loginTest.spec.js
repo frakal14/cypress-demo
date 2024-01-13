@@ -21,7 +21,7 @@ describe('Validate login page functionality', () => {
         onLoginPage.loginWithPartialData('test')
     })
 
-    it('User can close login modal with "x" or button', () => {
+    it('User can close login modal with "x" and button', () => {
         onLoginPage.closeLoginModalWithX()
         onLoginPage.closeLoginModalWithButton()
     })
