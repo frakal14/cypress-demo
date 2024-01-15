@@ -13,6 +13,18 @@ export class LandingPage {
 
     }
 
+    clickOnLandingPageCategories() {
+
+        landingRepo.getPhonesCategory().click()
+        landingRepo.getCategoriesFirstItem().should('contain','Samsung galaxy s6')
+        
+        landingRepo.getLaptopsCategory().click()
+        landingRepo.getCategoriesFirstItem().should('contain','Sony vaio i5') 
+        
+        landingRepo.getMonitorsCategory().click()
+        cy.get('#tbodyid').should('contain','Apple monitor 24') 
+    }
+
 
 
 

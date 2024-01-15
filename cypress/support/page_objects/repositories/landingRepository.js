@@ -12,6 +12,25 @@ export class LandingRepository {
 
     }
 
+    getPhonesCategory() {
+        return cy.get('[class="list-group-item"]').eq(0)
+    }
+
+    getLaptopsCategory() {
+        return cy.get('[class="list-group-item"]').eq(1)
+    }
+
+    getMonitorsCategory() {
+        return cy.get('[class="list-group-item"]').last()
+    }
+
+    getCategoriesFirstItem() {
+        return cy.get('#tbodyid').first()
+    }
+
+    
+    
+
 
 
 
