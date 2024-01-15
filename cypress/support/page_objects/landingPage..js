@@ -1,8 +1,20 @@
-export class LandingPage{
+import { landingRepo } from "./repositories/landingRepository"
 
-slideLeftOnHeroBanner() {
+export class LandingPage {
 
-}
+    clickOnLeftHeroBannerSlider() {
+        landingRepo.getLefttHeroSlider().click({ force: true})
+        cy.get('[class="carousel-item active"]', { timeout: 10000 }).should('be.visible')
+    }
+
+    clickOnRightHeroBannerSlider() {
+        landingRepo.getRightHeroSlider().click({ force: true })
+        cy.get('[class="carousel-item active"]', { timeout: 10000 }).should('be.visible')
+
+    }
+
+
+
 
 
 
