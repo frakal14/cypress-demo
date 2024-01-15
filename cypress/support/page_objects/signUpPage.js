@@ -11,6 +11,13 @@ export class SignUpPage{
         })
     }
 
+    signUpWithNoCredentials() {
+        repoSignUp.getSignUpButton().click({ force: true })
+        cy.on('window:alert', (text) => {
+            expect(text).to.contains('Please fill out Username and Password.')
+        })
+    }
+
 
 
 

@@ -14,9 +14,10 @@ describe('Validate sign up form functionality', () => {
 
     it('User is able to sign up with valid data', () => {
         onSignUpPage.signUpWithCredentials(faker.person.firstName(), signUpData.password)
+    })
 
-
-
+    it('User is not able to sign up with empty form', () => {
+        onSignUpPage.signUpWithNoCredentials()
     })
 
     
