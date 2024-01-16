@@ -36,6 +36,12 @@ export class LandingRepository {
         return cy.get('#prev2')
     }
 
+    getAddCategoriesFirstItemTo() {
+        return cy.get('a[href="prod.html?idp_=1"]').first()
+    }
+
+
+
     
     
 

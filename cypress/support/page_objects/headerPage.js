@@ -8,6 +8,10 @@ export class HeaderPage{
         cy.get('#signin2').click()
     }
 
+    clickOnCart() {
+        cy.get('#cartur').click()
+    }
+
 
 
 

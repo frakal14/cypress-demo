@@ -1,5 +1,4 @@
-const { onlandingPage } = require("../../support/page_objects/landingPage.")
-const { onLoginPage } = require("../../support/page_objects/loginPage")
+const { onLandingPage } = require("../../support/page_objects/landingPage.")
 
 describe('Validate landing page functionality and elements', () => {
 
@@ -9,17 +8,17 @@ describe('Validate landing page functionality and elements', () => {
 
 
     it('User is able to slide the hero banned left or right', () => {
-        onlandingPage.clickOnLeftHeroBannerSlider()
-        onlandingPage.clickOnRightHeroBannerSlider()
+        onLandingPage.clickOnLeftHeroBannerSlider()
+        onLandingPage.clickOnRightHeroBannerSlider()
 
     })
 
     it('User is able to navigate through landing page categories', () => {
-        onlandingPage.clickOnLandingPageCategories()
+        onLandingPage.clickOnLandingPageCategories()
     })
 
     it('User is able to use categories page pagination', () => {
-        onlandingPage.clickOnCategoriesPaginationButtons()
+        onLandingPage.clickOnCategoriesPaginationButtons()
 
     })
 

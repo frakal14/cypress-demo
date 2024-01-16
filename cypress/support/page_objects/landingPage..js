@@ -1,3 +1,4 @@
+import { onProductDetail } from "./productDetail"
 import { landingRepo } from "./repositories/landingRepository"
 
 export class LandingPage {
@@ -32,8 +33,11 @@ export class LandingPage {
 
         landingRepo.getPrevCategoriesPagonationButton().click().click({ force: true })
         cy.get('[style="display: block;"]').should('exist')
+    }
 
-
+    addSingleProductToCart() {
+        landingRepo.getAddCategoriesFirstItemTo().click({force: true})
+        onProductDetail.clickOnAddToCart()
 
     }
 
@@ -45,4 +49,4 @@ export class LandingPage {
 
 }
 
-export const onlandingPage = new LandingPage()
+export const onLandingPage = new LandingPage()

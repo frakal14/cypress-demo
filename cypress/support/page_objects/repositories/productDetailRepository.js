@@ -1,5 +1,9 @@
 export class ProductDetailRepository{
 
+    getAddToCartButton() {
+        return cy.contains('Add to cart')
+    }
+
 
 
 
