@@ -28,6 +28,14 @@ export class LandingRepository {
         return cy.get('#tbodyid').first()
     }
 
+    getNextCategoriesPagonationButton() {
+        return cy.get('#next2')
+    }
+
+    getPrevCategoriesPagonationButton() {
+        return cy.get('#prev2')
+    }
+
     
     
 

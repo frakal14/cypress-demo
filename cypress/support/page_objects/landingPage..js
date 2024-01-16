@@ -25,6 +25,18 @@ export class LandingPage {
         cy.get('#tbodyid').should('contain','Apple monitor 24') 
     }
 
+    clickOnCategoriesPaginationButtons() {
+      
+        landingRepo.getNextCategoriesPagonationButton().trigger('mouseover').wait(1000).click({force:true});
+        cy.get('[style="display: none;"]').should('exist')
+
+        landingRepo.getPrevCategoriesPagonationButton().click().click({force: true})
+        cy.get('[style="display: block;"]').should('exist')
+
+        
+
+    }
+
 
 
 

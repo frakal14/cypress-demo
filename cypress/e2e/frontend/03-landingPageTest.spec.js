@@ -18,6 +18,11 @@ describe('Validate landing page functionality and elements', () => {
         onlandingPage.clickOnLandingPageCategories()
     })
 
+    it('User is able to use categories page pagination', () => {
+        onlandingPage.clickOnCategoriesPaginationButtons()
+
+    })
+
 
 
 
