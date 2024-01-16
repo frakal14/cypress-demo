@@ -24,7 +24,4 @@ describe('Validate landing page functionality and elements', () => {
     })
 
 
-
-
-
 })
