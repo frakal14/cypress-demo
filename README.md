@@ -24,6 +24,6 @@ FYI: trying out different design patterns is not a bad thing, let's remember tha
 
 :one: Clone the project
 
-2️⃣: Run npm install
+2️⃣ Run npm install
 
-3️⃣: Run npx cypress run or npx cypress open to execute the tests.
+3️⃣ Run npx cypress run or npx cypress open to execute the tests.
