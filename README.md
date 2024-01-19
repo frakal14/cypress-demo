@@ -1,6 +1,6 @@
 Welcome to the Cypress Tests Framework Example!
 
-This project, created by Karol F - showcases a Cypress-based testing framework that tests an e-commerce dsimple demo website. The main goal is to provide end-to-end and full test coverage for [(https://demoblaze.com/).] 
+This project, created by Karol F - showcases a Cypress-based testing framework that tests an e-commerce dsimple demo website. The main goal is to provide end-to-end and full test coverage for https://demoblaze.com/
 
 Bear with me, this is only the beginning, eventhough the demo site is extremely simple, (hence I'm moving to a better one) I've tried implementing practises like I would to a complex one.
 
