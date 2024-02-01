@@ -27,3 +27,6 @@ FYI: trying out different design patterns is not a bad thing, let's remember tha
 2️⃣ Run npm install
 
 3️⃣ Run npx cypress run or npx cypress open to execute the tests.
+
+# Last but not least
+▶️ Here's a link to the second demo project with Cypress https://github.com/frakal14/cypress-demo-2
